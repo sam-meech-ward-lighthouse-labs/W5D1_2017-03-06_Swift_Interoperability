@@ -67,8 +67,8 @@
 
 - (NSArray *)convertJSONToPhotos:(NSDictionary *)json {
     NSDictionary *photosDictionary = json[@"photos"];
-    NSArray *photos = photosDictionary[@"photo"];
-    return photos;
+    NSArray *photoDictionaries = photosDictionary[@"photo"];
+    return photoDictionaries;
 }
 
 #pragma mark - Collection View
