@@ -10,10 +10,12 @@
 		222D7A691E6B8059007D3807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D7A681E6B8059007D3807 /* main.m */; };
 		222D7A6C1E6B8059007D3807 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D7A6B1E6B8059007D3807 /* AppDelegate.m */; };
 		222D7A6F1E6B8059007D3807 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D7A6E1E6B8059007D3807 /* ViewController.m */; };
-		222D7A721E6B8059007D3807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222D7A701E6B8059007D3807 /* Main.storyboard */; };
 		222D7A741E6B8059007D3807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222D7A731E6B8059007D3807 /* Assets.xcassets */; };
 		222D7A771E6B8059007D3807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222D7A751E6B8059007D3807 /* LaunchScreen.storyboard */; };
 		222D7A821E6B8059007D3807 /* PhotosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D7A811E6B8059007D3807 /* PhotosTests.m */; };
+		222D7A901E6B80A8007D3807 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D7A8D1E6B80A8007D3807 /* Photo.m */; };
+		222D7A911E6B80A8007D3807 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D7A8F1E6B80A8007D3807 /* PhotoCollectionViewCell.m */; };
+		222D7A931E6B80BF007D3807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222D7A921E6B80BF007D3807 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,13 +35,17 @@
 		222D7A6B1E6B8059007D3807 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		222D7A6D1E6B8059007D3807 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		222D7A6E1E6B8059007D3807 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		222D7A711E6B8059007D3807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		222D7A731E6B8059007D3807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222D7A761E6B8059007D3807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		222D7A781E6B8059007D3807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222D7A7D1E6B8059007D3807 /* PhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222D7A811E6B8059007D3807 /* PhotosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosTests.m; sourceTree = "<group>"; };
 		222D7A831E6B8059007D3807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222D7A8C1E6B80A8007D3807 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		222D7A8D1E6B80A8007D3807 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		222D7A8E1E6B80A8007D3807 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		222D7A8F1E6B80A8007D3807 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		222D7A921E6B80BF007D3807 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +91,11 @@
 				222D7A6B1E6B8059007D3807 /* AppDelegate.m */,
 				222D7A6D1E6B8059007D3807 /* ViewController.h */,
 				222D7A6E1E6B8059007D3807 /* ViewController.m */,
-				222D7A701E6B8059007D3807 /* Main.storyboard */,
+				222D7A8C1E6B80A8007D3807 /* Photo.h */,
+				222D7A8D1E6B80A8007D3807 /* Photo.m */,
+				222D7A8E1E6B80A8007D3807 /* PhotoCollectionViewCell.h */,
+				222D7A8F1E6B80A8007D3807 /* PhotoCollectionViewCell.m */,
+				222D7A921E6B80BF007D3807 /* Main.storyboard */,
 				222D7A731E6B8059007D3807 /* Assets.xcassets */,
 				222D7A751E6B8059007D3807 /* LaunchScreen.storyboard */,
 				222D7A781E6B8059007D3807 /* Info.plist */,
@@ -195,9 +205,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222D7A931E6B80BF007D3807 /* Main.storyboard in Resources */,
 				222D7A771E6B8059007D3807 /* LaunchScreen.storyboard in Resources */,
 				222D7A741E6B8059007D3807 /* Assets.xcassets in Resources */,
-				222D7A721E6B8059007D3807 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222D7A901E6B80A8007D3807 /* Photo.m in Sources */,
 				222D7A6F1E6B8059007D3807 /* ViewController.m in Sources */,
 				222D7A6C1E6B8059007D3807 /* AppDelegate.m in Sources */,
+				222D7A911E6B80A8007D3807 /* PhotoCollectionViewCell.m in Sources */,
 				222D7A691E6B8059007D3807 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,14 +252,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		222D7A701E6B8059007D3807 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				222D7A711E6B8059007D3807 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		222D7A751E6B8059007D3807 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
