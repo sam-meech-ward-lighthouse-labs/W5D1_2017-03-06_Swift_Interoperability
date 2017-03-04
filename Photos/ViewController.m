@@ -53,8 +53,7 @@
             return;
         }
         
-        NSDictionary *photosDictionary = jsonFlickrApi[@"photos"];
-        self.photos = photosDictionary[@"photo"];
+        self.photos = [self convertJSONToPhotos:jsonFlickrApi];
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self.collectionView reloadData];
@@ -66,9 +65,10 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSArray *)convertJSONToPhotos:(NSDictionary *)json {
+    NSDictionary *photosDictionary = json[@"photos"];
+    NSArray *photos = photosDictionary[@"photo"];
+    return photos;
 }
 
 #pragma mark - Collection View
@@ -85,8 +85,7 @@
     NSDictionary *photo = self.photos[indexPath.row];
     cell.label.text = photo[@"title"];
     
-    NSString *urlString = photo[@"url_m"];
-    NSURL *url = [NSURL URLWithString:urlString];
+    NSURL *url = [NSURL URLWithString:photo[@"url_m"]];
     [self downloadImageAtURL:url andPhotoCell:cell];
     
     return cell;
