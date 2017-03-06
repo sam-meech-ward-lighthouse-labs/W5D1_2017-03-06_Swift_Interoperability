@@ -8,12 +8,12 @@
 
 #import "ViewController.h"
 
-//#import "Photo.h"
 #import "PhotoCollectionViewCell.h"
+#import "Photos-Swift.h"
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (nonatomic, strong) NSArray<NSDictionary *> *photos;
+@property (nonatomic, strong) NSArray<Photo *> *photos;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
@@ -65,10 +65,18 @@
     
 }
 
-- (NSArray *)convertJSONToPhotos:(NSDictionary *)json {
+- (NSArray<Photo *> *)convertJSONToPhotos:(NSDictionary *)json {
     NSDictionary *photosDictionary = json[@"photos"];
     NSArray *photoDictionaries = photosDictionary[@"photo"];
-    return photoDictionaries;
+    
+    NSMutableArray *photos = [NSMutableArray array];
+    for (NSDictionary *jsonPhoto in photoDictionaries) {
+        
+        Photo *photo = [[Photo alloc] initWithTitle:jsonPhoto[@"title"]photoURL:[NSURL URLWithString:jsonPhoto[@"url_m"]]];
+        [photos addObject:photo];
+    }
+    
+    return photos.copy;
 }
 
 #pragma mark - Collection View
@@ -82,10 +90,10 @@
     
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"photo-cell" forIndexPath:indexPath];
     
-    NSDictionary *photo = self.photos[indexPath.row];
-    cell.label.text = photo[@"title"];
+    Photo *photo = self.photos[indexPath.row];
+    cell.label.text = photo.title;
     
-    NSURL *url = [NSURL URLWithString:photo[@"url_m"]];
+    NSURL *url = photo.photoURL;
     [self downloadImageAtURL:url andPhotoCell:cell];
     
     return cell;
